@@ -1,0 +1,39 @@
+[package]
+name = "p2p_rs"
+version = { workspace = true }
+edition = { workspace = true }
+publish = false
+
+[lib]
+doctest = false
+path = "src/lib.rs"
+name = "p2p_rs"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+networking.workspace = true
+extend.workspace = true
+
+# interop
+pyo3 = { workspace = true, features = ["extension-module", "abi3-py310"] }
+pyo3-stub-gen.workspace = true
+pyo3-async-runtimes = { workspace = true, features = [
+  "attributes",
+  "tokio-runtime",
+  "testing",
+] }
+
+# async runtime
+tokio = { workspace = true, features = ["full"] }
+futures-lite.workspace = true
+pin-project.workspace = true
+
+# Tracing
+log.workspace = true
+env_logger.workspace = true
+
+# Networking
+zenoh.workspace = true
+rand.workspace = true
+serde_json.workspace = true
+parking_lot.workspace = true

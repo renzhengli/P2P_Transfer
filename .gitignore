@@ -1,0 +1,22 @@
+# Rust build artifacts
+target/
+Cargo.lock.lock
+
+# Compiled native libraries
+*.so
+*.dylib
+*.dll
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+env/
+
+# Runtime directories
+downloads/
+test_scratch/
+*.part
+.vscode/
