@@ -21,7 +21,7 @@ pub struct PyNetworkingHandle {
 }
 
 #[gen_stub_pyclass]
-#[pyclass(name = "FromSwarm")]
+#[pyclass(name = "FromSwarm", skip_from_py_object)]
 #[derive(Clone)]
 pub struct PyFromSwarm {
     #[pyo3(get)]
