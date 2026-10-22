@@ -31,6 +31,7 @@ pub fn cfg(identity: &str, listen_port: u16) -> Result<zenoh::Config> {
     cfg.insert_json5("scouting/gossip/multihop", "true")?;
     cfg.insert_json5("adminspace/enabled", "true")?;
     cfg.insert_json5("transport/link/rx/buffer_size", "16777216")?;
+    cfg.insert_json5("timestamping/enabled", "false")?;
     Ok(cfg)
 }
 
